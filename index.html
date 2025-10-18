@@ -3,81 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AWP - Celeste Gómez Mendoza</title>
+  <title>Inicio - Proyecto AWP</title>
+
+  <!-- Fuente moderna y colores pastel -->
   <style>
     body {
-      font-family: "Segoe UI", Arial, sans-serif;
-      background-color: #f4f7fb;
-      color: #222;
-      padding: 40px;
-      text-align: center;
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #a8edea, #fed6e3);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #333;
     }
-    h1 { color: #0b5cff; margin-bottom:5px; }
-    h2 { color: #555; margin-top:0; font-weight:400; }
 
     .container {
-      background: #fff;
-      padding: 25px 40px;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-      max-width: 600px;
-      margin: 40px auto;
       text-align: center;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 50px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      max-width: 400px;
     }
 
-    .folder, .back {
-      display: block;
-      margin: 10px auto;
-      padding: 12px 20px;
-      border-radius: 6px;
-      color: #fff;
+    h1 {
+      margin-bottom: 10px;
+      font-size: 28px;
+      color: #444;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+
+    .info {
+      margin-bottom: 25px;
+      font-size: 16px;
+      color: #555;
+    }
+
+    a {
+      display: inline-block;
       text-decoration: none;
-      width: 200px;
-      transition: 0.2s;
-      cursor: pointer;
+      background-color: #ff8fab;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: all 0.3s ease;
     }
-    .folder { background-color: #0b5cff; }
-    .folder:hover { background-color: #0637a6; }
-    .back { background-color: #777; }
-    .back:hover { background-color: #555; }
 
-    .hidden { display: none; }
+    a:hover {
+      background-color: #ff5d8f;
+      transform: scale(1.05);
+    }
 
+    footer {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #666;
+    }
   </style>
 </head>
 <body>
-
-  <h1>Celeste Gómez Mendoza</h1>
-  <h2>Matrícula: 22307046</h2>
-
   <div class="container">
-    <!-- Vista AWP -->
-    <div id="awp" class="view">
-      <h3>Directorio raíz: AWP</h3>
-      <div class="folder" onclick="showView('u1')">📁 U1</div>
+    <h1>Bienvenida al Proyecto</h1>
+    <div class="info">
+      <p><strong>Nombre:</strong> Celeste Gómez Mendoza</p>
+      <p><strong>Matrícula:</strong> 22307046</p>
     </div>
 
-    <div id="u1" class="view hidden">
-        <h3>Subcarpeta: U1</h3>
-        
-        <!-- Botón que te lleva a SW -->
-        <a href="U1/SW/index.html" class="folder">📁 SW</a>
-        
-        <!-- Botón que te lleva a SW2 -->
-        <a href="U1/SW2/index.html" class="folder">📁 SW2</a>
-        
-      </div>
-      
-  <footer style="margin-top:30px; color:#777;">&copy; 2025 - Estructura de directorios simulada en un solo HTML</footer>
+    <a href="AWP/index.html">Ir a AWP</a>
 
-  <script>
-    function showView(id){
-      document.querySelectorAll('.view').forEach(v => v.classList.add('hidden'));
-      document.getElementById(id).classList.remove('hidden');
-    }
-  </script>
-
+    <footer>Desarrollado con 💖 por Celeste</footer>
+  </div>
 </body>
 </html>
+
 
 
