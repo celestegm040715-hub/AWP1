@@ -3,82 +3,89 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AWP - Celeste Gómez Mendoza</title>
+  <title>AWP - Menú de Unidades</title>
+
   <style>
     body {
-      font-family: "Segoe UI", Arial, sans-serif;
-      background-color: #f4f7fb;
-      color: #222;
-      padding: 40px;
-      text-align: center;
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #a8edea, #fed6e3);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #333;
     }
-    h1 { color: #0b5cff; margin-bottom:5px; }
-    h2 { color: #555; margin-top:0; font-weight:400; }
 
     .container {
-      background: #fff;
-      padding: 25px 40px;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-      max-width: 600px;
-      margin: 40px auto;
       text-align: center;
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 50px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      max-width: 450px;
     }
 
-    .folder, .back {
-      display: block;
-      margin: 10px auto;
-      padding: 12px 20px;
-      border-radius: 6px;
-      color: #fff;
+    h1 {
+      margin-bottom: 25px;
+      font-size: 26px;
+      color: #444;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 30px;
+    }
+
+    li {
+      margin: 15px 0;
+    }
+
+    a {
       text-decoration: none;
-      width: 200px;
-      transition: 0.2s;
-      cursor: pointer;
+      background-color: #ff8fab;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      display: inline-block;
     }
-    .folder { background-color: #0b5cff; }
-    .folder:hover { background-color: #0637a6; }
-    .back { background-color: #777; }
-    .back:hover { background-color: #555; }
 
-    .hidden { display: none; }
+    a:hover {
+      background-color: #ff5d8f;
+      transform: scale(1.05);
+    }
 
+    .back {
+      background-color: #74c0fc;
+    }
+
+    .back:hover {
+      background-color: #4dabf7;
+    }
+
+    footer {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #666;
+    }
   </style>
 </head>
 <body>
-
-  <h1>Celeste Gómez Mendoza</h1>
-  <h2>Matrícula: 22307046</h2>
-
   <div class="container">
-    <!-- Vista AWP -->
-    <div id="awp" class="view">
-      <h3>Directorio raíz: AWP</h3>
-      <div class="folder" onclick="showView('u1')">📁 U1</div>
-    </div>
+    <h1>Menú - Unidad 1</h1>
 
-    <div id="u1" class="view hidden">
-        <h3>Subcarpeta: U1</h3>
-        
-        <!-- Botón que te lleva a SW -->
-        <a href="SW/index.html" class="folder">📁 SW</a>
-        
-        <!-- Botón que te lleva a SW2 -->
-        <a href="SW2/index.html" class="folder">📁 SW2</a>
-        
-      </div>
-      
-  <footer style="margin-top:30px; color:#777;">&copy; 2025 - Estructura de directorios simulada en un solo HTML</footer>
+    <ul>
+      <li><a href="U1/SW/index.html">Subunidad SW</a></li>
+      <li><a href="U1/SW2/index.html">Subunidad SW2</a></li>
+    </ul>
 
-  <script>
-    function showView(id){
-      document.querySelectorAll('.view').forEach(v => v.classList.add('hidden'));
-      document.getElementById(id).classList.remove('hidden');
-    }
-  </script>
+    <a href="../index.html" class="back">Volver al inicio</a>
 
+    <footer>Creado por <strong>Celeste Gómez Mendoza</strong> 💖</footer>
+  </div>
 </body>
 </html>
-
-
-
